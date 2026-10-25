@@ -1,0 +1,97 @@
+﻿image,annotation_id,category_id_1,category_id_2,other_annotation_id,bbox_iou,polygon_iou,finding
+train_466.png,3044,0,5,3056,0.0699,0.0186,same category pair occurs multiple times; spatial relation requires review
+train_466.png,3056,0,5,3044,0.0699,0.0186,same category pair occurs multiple times; spatial relation requires review
+train_466.png,3045,0,6,3046,0.1873,0.0031,same category pair occurs multiple times; spatial relation requires review
+train_466.png,3046,0,6,3045,0.1873,0.0031,same category pair occurs multiple times; spatial relation requires review
+train_466.png,3044,0,5,3055,0.7866,0.7746,polygon overlap >= 0.50; inspect visually
+train_466.png,3055,0,4,3044,0.7866,0.7746,polygon overlap >= 0.50; inspect visually
+train_466.png,3045,0,6,3056,0.8644,0.8494,polygon overlap >= 0.50; inspect visually
+train_466.png,3056,0,5,3045,0.8644,0.8494,polygon overlap >= 0.50; inspect visually
+train_255.png,3835,1,5,3836,0.1366,0.0279,same category pair occurs multiple times; spatial relation requires review
+train_255.png,3836,1,5,3835,0.1366,0.0279,same category pair occurs multiple times; spatial relation requires review
+train_415.png,4275,2,0,4276,0.1404,0.0415,same category pair occurs multiple times; spatial relation requires review
+train_415.png,4276,2,0,4275,0.1404,0.0415,same category pair occurs multiple times; spatial relation requires review
+train_247.png,4330,3,0,4331,0.0,0.004,same category pair occurs multiple times; spatial relation requires review
+train_247.png,4331,3,0,4330,0.0,0.004,same category pair occurs multiple times; spatial relation requires review
+train_247.png,4330,3,0,4332,0.8386,0.7401,polygon overlap >= 0.50; inspect visually
+train_247.png,4332,3,1,4330,0.8386,0.7401,polygon overlap >= 0.50; inspect visually
+train_506.png,5061,2,0,5070,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5070,2,0,5061,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5062,2,1,5071,0.0694,0.0131,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5071,2,1,5062,0.0694,0.0131,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5063,2,2,5072,0.0779,0.0139,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5072,2,2,5063,0.0779,0.0139,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5064,2,3,5073,0.1805,0.0456,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5073,2,3,5064,0.1805,0.0456,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5065,2,4,5074,0.089,0.0068,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5074,2,4,5065,0.089,0.0068,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5066,2,5,5075,0.1285,0.0233,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5075,2,5,5066,0.1285,0.0233,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5067,2,6,5076,0.2308,0.0249,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5076,2,6,5067,0.2308,0.0249,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5068,3,0,5069,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5069,3,0,5068,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_506.png,5061,2,0,5071,0.7534,0.5783,polygon overlap >= 0.50; inspect visually
+train_506.png,5071,2,1,5061,0.7534,0.5783,polygon overlap >= 0.50; inspect visually
+train_506.png,5062,2,1,5072,0.7095,0.7002,polygon overlap >= 0.50; inspect visually
+train_506.png,5072,2,2,5062,0.7095,0.7002,polygon overlap >= 0.50; inspect visually
+train_506.png,5063,2,2,5073,0.6611,0.6098,polygon overlap >= 0.50; inspect visually
+train_506.png,5073,2,3,5063,0.6611,0.6098,polygon overlap >= 0.50; inspect visually
+train_506.png,5064,2,3,5074,0.6387,0.6195,polygon overlap >= 0.50; inspect visually
+train_506.png,5074,2,4,5064,0.6387,0.6195,polygon overlap >= 0.50; inspect visually
+train_506.png,5065,2,4,5075,0.6784,0.728,polygon overlap >= 0.50; inspect visually
+train_506.png,5075,2,5,5065,0.6784,0.728,polygon overlap >= 0.50; inspect visually
+train_506.png,5066,2,5,5076,0.851,0.8411,polygon overlap >= 0.50; inspect visually
+train_506.png,5076,2,6,5066,0.851,0.8411,polygon overlap >= 0.50; inspect visually
+train_506.png,5067,2,6,5077,0.8166,0.6921,polygon overlap >= 0.50; inspect visually
+train_506.png,5077,2,7,5067,0.8166,0.6921,polygon overlap >= 0.50; inspect visually
+train_506.png,5068,3,0,5070,0.7415,0.7054,polygon overlap >= 0.50; inspect visually
+train_506.png,5070,2,0,5068,0.7415,0.7054,polygon overlap >= 0.50; inspect visually
+train_584.png,7739,3,2,7744,0.1731,0.0183,same category pair occurs multiple times; spatial relation requires review
+train_584.png,7744,3,2,7739,0.1731,0.0183,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9614,3,3,9618,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9618,3,3,9614,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9615,3,4,9619,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9619,3,4,9615,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9616,3,5,9620,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9620,3,5,9616,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9617,3,6,9621,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_150.png,9621,3,6,9617,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9852,0,0,9867,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9867,0,0,9852,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9853,0,1,9868,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9868,0,1,9853,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9854,0,2,9869,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9869,0,2,9854,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9855,0,3,9870,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9870,0,3,9855,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9856,0,4,9871,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9871,0,4,9856,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9857,0,5,9872,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9872,0,5,9857,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9858,0,6,9873,0.0036,0.0,same category pair occurs multiple times; spatial relation requires review
+train_507.png,9873,0,6,9858,0.0036,0.0,same category pair occurs multiple times; spatial relation requires review
+train_535.png,10918,1,2,10934,0.0184,0.0,same category pair occurs multiple times; spatial relation requires review
+train_535.png,10934,1,2,10918,0.0184,0.0,same category pair occurs multiple times; spatial relation requires review
+train_24.png,11185,2,5,11186,0.1882,0.0043,same category pair occurs multiple times; spatial relation requires review
+train_24.png,11186,2,5,11185,0.1882,0.0043,same category pair occurs multiple times; spatial relation requires review
+train_486.png,12022,2,5,12023,0.2548,0.0019,same category pair occurs multiple times; spatial relation requires review
+train_486.png,12023,2,5,12022,0.2548,0.0019,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13461,1,1,13480,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13480,1,1,13461,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13462,1,2,13481,0.0122,0.007,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13481,1,2,13462,0.0122,0.007,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13463,1,3,13482,0.0104,0.003,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13482,1,3,13463,0.0104,0.003,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13464,1,4,13483,0.0018,0.0,same category pair occurs multiple times; spatial relation requires review
+train_628.png,13483,1,4,13464,0.0018,0.0,same category pair occurs multiple times; spatial relation requires review
+train_504.png,14069,3,5,14070,0.1902,0.0149,same category pair occurs multiple times; spatial relation requires review
+train_504.png,14070,3,5,14069,0.1902,0.0149,same category pair occurs multiple times; spatial relation requires review
+train_70.png,14592,3,3,14597,0.1798,0.0457,same category pair occurs multiple times; spatial relation requires review
+train_70.png,14597,3,3,14592,0.1798,0.0457,same category pair occurs multiple times; spatial relation requires review
+train_222.png,15863,1,5,15864,0.1066,0.0207,same category pair occurs multiple times; spatial relation requires review
+train_222.png,15864,1,5,15863,0.1066,0.0207,same category pair occurs multiple times; spatial relation requires review
+train_258.png,16564,0,3,16575,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_258.png,16575,0,3,16564,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_258.png,16565,0,4,16576,0.0,0.0,same category pair occurs multiple times; spatial relation requires review
+train_258.png,16576,0,4,16565,0.0,0.0,same category pair occurs multiple times; spatial relation requires review

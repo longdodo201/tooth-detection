@@ -1,0 +1,331 @@
+{
+  "mode": "fdi_quadrant_enumeration",
+  "fdi_formula": "fdi_code = 10 * quadrant_number + tooth_enumeration_number",
+  "class_id_convention": "contiguous zero-based IDs ordered by ascending FDI code",
+  "category_metadata_id_key": "category_id when present, otherwise id",
+  "label_semantics": "category_id_1 is quadrant; category_id_2 is tooth enumeration, per the user-provided DENTEX description",
+  "class_to_fdi": [
+    {
+      "fdi_code": 11,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 1,
+      "original_category_id_1": 0,
+      "original_category_id_2": 0,
+      "category_name_1": 1,
+      "category_name_2": "1",
+      "class_id": 0
+    },
+    {
+      "fdi_code": 12,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 2,
+      "original_category_id_1": 0,
+      "original_category_id_2": 1,
+      "category_name_1": 1,
+      "category_name_2": "2",
+      "class_id": 1
+    },
+    {
+      "fdi_code": 13,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 3,
+      "original_category_id_1": 0,
+      "original_category_id_2": 2,
+      "category_name_1": 1,
+      "category_name_2": "3",
+      "class_id": 2
+    },
+    {
+      "fdi_code": 14,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 4,
+      "original_category_id_1": 0,
+      "original_category_id_2": 3,
+      "category_name_1": 1,
+      "category_name_2": "4",
+      "class_id": 3
+    },
+    {
+      "fdi_code": 15,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 5,
+      "original_category_id_1": 0,
+      "original_category_id_2": 4,
+      "category_name_1": 1,
+      "category_name_2": "5",
+      "class_id": 4
+    },
+    {
+      "fdi_code": 16,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 6,
+      "original_category_id_1": 0,
+      "original_category_id_2": 5,
+      "category_name_1": 1,
+      "category_name_2": "6",
+      "class_id": 5
+    },
+    {
+      "fdi_code": 17,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 7,
+      "original_category_id_1": 0,
+      "original_category_id_2": 6,
+      "category_name_1": 1,
+      "category_name_2": "7",
+      "class_id": 6
+    },
+    {
+      "fdi_code": 18,
+      "quadrant_number": 1,
+      "tooth_enumeration_number": 8,
+      "original_category_id_1": 0,
+      "original_category_id_2": 7,
+      "category_name_1": 1,
+      "category_name_2": "8",
+      "class_id": 7
+    },
+    {
+      "fdi_code": 21,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 1,
+      "original_category_id_1": 1,
+      "original_category_id_2": 0,
+      "category_name_1": 2,
+      "category_name_2": "1",
+      "class_id": 8
+    },
+    {
+      "fdi_code": 22,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 2,
+      "original_category_id_1": 1,
+      "original_category_id_2": 1,
+      "category_name_1": 2,
+      "category_name_2": "2",
+      "class_id": 9
+    },
+    {
+      "fdi_code": 23,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 3,
+      "original_category_id_1": 1,
+      "original_category_id_2": 2,
+      "category_name_1": 2,
+      "category_name_2": "3",
+      "class_id": 10
+    },
+    {
+      "fdi_code": 24,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 4,
+      "original_category_id_1": 1,
+      "original_category_id_2": 3,
+      "category_name_1": 2,
+      "category_name_2": "4",
+      "class_id": 11
+    },
+    {
+      "fdi_code": 25,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 5,
+      "original_category_id_1": 1,
+      "original_category_id_2": 4,
+      "category_name_1": 2,
+      "category_name_2": "5",
+      "class_id": 12
+    },
+    {
+      "fdi_code": 26,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 6,
+      "original_category_id_1": 1,
+      "original_category_id_2": 5,
+      "category_name_1": 2,
+      "category_name_2": "6",
+      "class_id": 13
+    },
+    {
+      "fdi_code": 27,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 7,
+      "original_category_id_1": 1,
+      "original_category_id_2": 6,
+      "category_name_1": 2,
+      "category_name_2": "7",
+      "class_id": 14
+    },
+    {
+      "fdi_code": 28,
+      "quadrant_number": 2,
+      "tooth_enumeration_number": 8,
+      "original_category_id_1": 1,
+      "original_category_id_2": 7,
+      "category_name_1": 2,
+      "category_name_2": "8",
+      "class_id": 15
+    },
+    {
+      "fdi_code": 31,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 1,
+      "original_category_id_1": 2,
+      "original_category_id_2": 0,
+      "category_name_1": 3,
+      "category_name_2": "1",
+      "class_id": 16
+    },
+    {
+      "fdi_code": 32,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 2,
+      "original_category_id_1": 2,
+      "original_category_id_2": 1,
+      "category_name_1": 3,
+      "category_name_2": "2",
+      "class_id": 17
+    },
+    {
+      "fdi_code": 33,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 3,
+      "original_category_id_1": 2,
+      "original_category_id_2": 2,
+      "category_name_1": 3,
+      "category_name_2": "3",
+      "class_id": 18
+    },
+    {
+      "fdi_code": 34,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 4,
+      "original_category_id_1": 2,
+      "original_category_id_2": 3,
+      "category_name_1": 3,
+      "category_name_2": "4",
+      "class_id": 19
+    },
+    {
+      "fdi_code": 35,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 5,
+      "original_category_id_1": 2,
+      "original_category_id_2": 4,
+      "category_name_1": 3,
+      "category_name_2": "5",
+      "class_id": 20
+    },
+    {
+      "fdi_code": 36,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 6,
+      "original_category_id_1": 2,
+      "original_category_id_2": 5,
+      "category_name_1": 3,
+      "category_name_2": "6",
+      "class_id": 21
+    },
+    {
+      "fdi_code": 37,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 7,
+      "original_category_id_1": 2,
+      "original_category_id_2": 6,
+      "category_name_1": 3,
+      "category_name_2": "7",
+      "class_id": 22
+    },
+    {
+      "fdi_code": 38,
+      "quadrant_number": 3,
+      "tooth_enumeration_number": 8,
+      "original_category_id_1": 2,
+      "original_category_id_2": 7,
+      "category_name_1": 3,
+      "category_name_2": "8",
+      "class_id": 23
+    },
+    {
+      "fdi_code": 41,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 1,
+      "original_category_id_1": 3,
+      "original_category_id_2": 0,
+      "category_name_1": 4,
+      "category_name_2": "1",
+      "class_id": 24
+    },
+    {
+      "fdi_code": 42,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 2,
+      "original_category_id_1": 3,
+      "original_category_id_2": 1,
+      "category_name_1": 4,
+      "category_name_2": "2",
+      "class_id": 25
+    },
+    {
+      "fdi_code": 43,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 3,
+      "original_category_id_1": 3,
+      "original_category_id_2": 2,
+      "category_name_1": 4,
+      "category_name_2": "3",
+      "class_id": 26
+    },
+    {
+      "fdi_code": 44,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 4,
+      "original_category_id_1": 3,
+      "original_category_id_2": 3,
+      "category_name_1": 4,
+      "category_name_2": "4",
+      "class_id": 27
+    },
+    {
+      "fdi_code": 45,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 5,
+      "original_category_id_1": 3,
+      "original_category_id_2": 4,
+      "category_name_1": 4,
+      "category_name_2": "5",
+      "class_id": 28
+    },
+    {
+      "fdi_code": 46,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 6,
+      "original_category_id_1": 3,
+      "original_category_id_2": 5,
+      "category_name_1": 4,
+      "category_name_2": "6",
+      "class_id": 29
+    },
+    {
+      "fdi_code": 47,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 7,
+      "original_category_id_1": 3,
+      "original_category_id_2": 6,
+      "category_name_1": 4,
+      "category_name_2": "7",
+      "class_id": 30
+    },
+    {
+      "fdi_code": 48,
+      "quadrant_number": 4,
+      "tooth_enumeration_number": 8,
+      "original_category_id_1": 3,
+      "original_category_id_2": 7,
+      "category_name_1": 4,
+      "category_name_2": "8",
+      "class_id": 31
+    }
+  ],
+  "observed_valid_fdi_pair_count": 32,
+  "unexpected_observed_pairs": []
+}
