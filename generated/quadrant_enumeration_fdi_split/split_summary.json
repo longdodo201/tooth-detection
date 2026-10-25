@@ -1,0 +1,284 @@
+{
+  "split_strategy": "deterministic image-level random split",
+  "grouping_metadata_found": false,
+  "group_independence_guaranteed": false,
+  "limitation": "No patient/study/group identifier was found; image-level split cannot rule out patient-level leakage.",
+  "seed": 42,
+  "train_fraction_requested": 0.8,
+  "train_rounding": "floor(total_images * train_fraction)",
+  "image_count": {
+    "train": 507,
+    "val": 127
+  },
+  "annotation_count": {
+    "train": 14436,
+    "val": 3659
+  },
+  "class_distribution_annotations": {
+    "train": {
+      "0": {
+        "fdi_code": 11,
+        "count": 501
+      },
+      "1": {
+        "fdi_code": 12,
+        "count": 497
+      },
+      "2": {
+        "fdi_code": 13,
+        "count": 495
+      },
+      "3": {
+        "fdi_code": 14,
+        "count": 467
+      },
+      "4": {
+        "fdi_code": 15,
+        "count": 456
+      },
+      "5": {
+        "fdi_code": 16,
+        "count": 450
+      },
+      "6": {
+        "fdi_code": 17,
+        "count": 459
+      },
+      "7": {
+        "fdi_code": 18,
+        "count": 273
+      },
+      "8": {
+        "fdi_code": 21,
+        "count": 500
+      },
+      "9": {
+        "fdi_code": 22,
+        "count": 491
+      },
+      "10": {
+        "fdi_code": 23,
+        "count": 495
+      },
+      "11": {
+        "fdi_code": 24,
+        "count": 456
+      },
+      "12": {
+        "fdi_code": 25,
+        "count": 443
+      },
+      "13": {
+        "fdi_code": 26,
+        "count": 445
+      },
+      "14": {
+        "fdi_code": 27,
+        "count": 459
+      },
+      "15": {
+        "fdi_code": 28,
+        "count": 293
+      },
+      "16": {
+        "fdi_code": 31,
+        "count": 500
+      },
+      "17": {
+        "fdi_code": 32,
+        "count": 503
+      },
+      "18": {
+        "fdi_code": 33,
+        "count": 503
+      },
+      "19": {
+        "fdi_code": 34,
+        "count": 494
+      },
+      "20": {
+        "fdi_code": 35,
+        "count": 467
+      },
+      "21": {
+        "fdi_code": 36,
+        "count": 379
+      },
+      "22": {
+        "fdi_code": 37,
+        "count": 460
+      },
+      "23": {
+        "fdi_code": 38,
+        "count": 314
+      },
+      "24": {
+        "fdi_code": 41,
+        "count": 501
+      },
+      "25": {
+        "fdi_code": 42,
+        "count": 501
+      },
+      "26": {
+        "fdi_code": 43,
+        "count": 503
+      },
+      "27": {
+        "fdi_code": 44,
+        "count": 493
+      },
+      "28": {
+        "fdi_code": 45,
+        "count": 465
+      },
+      "29": {
+        "fdi_code": 46,
+        "count": 391
+      },
+      "30": {
+        "fdi_code": 47,
+        "count": 461
+      },
+      "31": {
+        "fdi_code": 48,
+        "count": 321
+      }
+    },
+    "val": {
+      "0": {
+        "fdi_code": 11,
+        "count": 127
+      },
+      "1": {
+        "fdi_code": 12,
+        "count": 126
+      },
+      "2": {
+        "fdi_code": 13,
+        "count": 123
+      },
+      "3": {
+        "fdi_code": 14,
+        "count": 121
+      },
+      "4": {
+        "fdi_code": 15,
+        "count": 109
+      },
+      "5": {
+        "fdi_code": 16,
+        "count": 115
+      },
+      "6": {
+        "fdi_code": 17,
+        "count": 119
+      },
+      "7": {
+        "fdi_code": 18,
+        "count": 68
+      },
+      "8": {
+        "fdi_code": 21,
+        "count": 127
+      },
+      "9": {
+        "fdi_code": 22,
+        "count": 126
+      },
+      "10": {
+        "fdi_code": 23,
+        "count": 126
+      },
+      "11": {
+        "fdi_code": 24,
+        "count": 120
+      },
+      "12": {
+        "fdi_code": 25,
+        "count": 117
+      },
+      "13": {
+        "fdi_code": 26,
+        "count": 101
+      },
+      "14": {
+        "fdi_code": 27,
+        "count": 117
+      },
+      "15": {
+        "fdi_code": 28,
+        "count": 74
+      },
+      "16": {
+        "fdi_code": 31,
+        "count": 127
+      },
+      "17": {
+        "fdi_code": 32,
+        "count": 127
+      },
+      "18": {
+        "fdi_code": 33,
+        "count": 127
+      },
+      "19": {
+        "fdi_code": 34,
+        "count": 125
+      },
+      "20": {
+        "fdi_code": 35,
+        "count": 121
+      },
+      "21": {
+        "fdi_code": 36,
+        "count": 97
+      },
+      "22": {
+        "fdi_code": 37,
+        "count": 118
+      },
+      "23": {
+        "fdi_code": 38,
+        "count": 80
+      },
+      "24": {
+        "fdi_code": 41,
+        "count": 125
+      },
+      "25": {
+        "fdi_code": 42,
+        "count": 126
+      },
+      "26": {
+        "fdi_code": 43,
+        "count": 127
+      },
+      "27": {
+        "fdi_code": 44,
+        "count": 128
+      },
+      "28": {
+        "fdi_code": 45,
+        "count": 121
+      },
+      "29": {
+        "fdi_code": 46,
+        "count": 92
+      },
+      "30": {
+        "fdi_code": 47,
+        "count": 121
+      },
+      "31": {
+        "fdi_code": 48,
+        "count": 81
+      }
+    }
+  },
+  "source_image_dir": "D:\\long\\training_data\\quadrant_enumeration\\xrays",
+  "source_label_dir": "D:\\long\\tooth-detection\\generated\\quadrant_enumeration_fdi_labels\\labels",
+  "class_mapping_file": "D:\\long\\tooth-detection\\generated\\quadrant_enumeration_fdi_labels\\class_mapping.json",
+  "test_dataset_used": false,
+  "empty_label_behavior": "A zero-byte label file is accepted as an image with no objects; it contributes zero annotations."
+}

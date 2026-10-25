@@ -76,6 +76,14 @@ The output is label-only preparation, not a complete training dataset. The conve
 
 Phase 4 generated the label-only bundle at `generated/quadrant_enumeration_fdi_labels/`. It contains `labels/`, `class_mapping.json`, and a bundle README; source images are not copied, and no split is included.
 
+## Phase 5 train/validation split
+
+`generated/quadrant_enumeration_fdi_split/` contains a reproducible image-level split and `dataset.yaml`. No patient, study, subject, or group identifier was found in the dataset image records or available sidecar metadata. The split therefore uses seed `42` at approximately 80/20 (507 train images, 127 validation images); patient-level independence cannot be guaranteed. All annotations remain with their image. The separate test dataset was not used.
+
+The split root uses local NTFS junctions: `images/` points to the external source PNG directory and `labels/` points to the FDI label bundle. This avoids copying images or labels. The junctions are ignored by Git; recreate them using the paths and commands in the split README if needed. `train.txt` and `val.txt` list paths relative to the split root, and `dataset.yaml` maps class IDs 0–31 to the ordered FDI names.
+
+Blank label files are valid and count as zero objects. None of the 634 current label files is blank. Exact per-class train/validation annotation counts and all source paths are recorded in `split_summary.json`. The split remains vulnerable to patient leakage because patient-level grouping metadata is unavailable.
+
 ## Next steps after semantics are confirmed
 
 1. Record the target definition and class mapping with its source.
