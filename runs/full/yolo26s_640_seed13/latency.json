@@ -1,0 +1,45 @@
+{
+  "model": "yolo26s",
+  "seed": 13,
+  "run_directory": "D:\\long\\tooth-detection\\runs\\full\\yolo26s_640_seed13",
+  "checkpoint": "D:\\long\\tooth-detection\\runs\\full\\yolo26s_640_seed13\\weights\\best.pt",
+  "checkpoint_sha256": "610d4c82086c764eef9b48256db3faf4518d6477eba2308f3ca8d5581f9bc72c",
+  "checkpoint_size_bytes": 20331909,
+  "validation_manifest": "D:\\long\\tooth-detection\\generated\\quadrant_enumeration_fdi_split\\val.txt",
+  "validation_image_count": 127,
+  "warmup_image_count": 20,
+  "timed_passes": 3,
+  "timed_predictions": 381,
+  "image_size": 640,
+  "batch_size": 1,
+  "precision": "FP32",
+  "device": 0,
+  "timing_scope": "per-image in-memory Ultralytics predict call; includes preprocessing, model execution, postprocessing, and Python prediction-call overhead; excludes disk decode/loading",
+  "cuda_synchronized_before_and_after_each_timed_call": true,
+  "confidence_floor": 0.001,
+  "nms_iou": 0.7,
+  "latency_ms": {
+    "mean": 33.73096378089608,
+    "median": 32.376700022723526,
+    "p95_nearest_rank": 48.66070000571199
+  },
+  "effective_images_per_second": 29.646351242604027,
+  "ultralytics_reported_component_mean_ms": {
+    "preprocess": 2.1092125990432917,
+    "inference": 27.546860367408648,
+    "postprocess": 3.44021994775782
+  },
+  "software": {
+    "python": "3.12.10",
+    "os": "Windows-11-10.0.26300-SP0",
+    "ultralytics": "8.4.188",
+    "torch": "2.7.0+cu128",
+    "torchvision": "0.22.0+cu128",
+    "cuda_build": "12.8"
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "gpu_total_memory_bytes": 4294508544,
+    "driver_version": "610.62"
+  }
+}

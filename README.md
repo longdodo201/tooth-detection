@@ -2,7 +2,7 @@
 
 ## Current scope
 
-The current experiment direction is bounding-box object detection, with YOLO11s and YOLO26s as candidate models. Training and training-ready dataset creation have not started. A safe label-preparation utility is available for validation and optional label-only output after explicit mapping selection.
+The current experiment direction is bounding-box object detection, with YOLO11s and YOLO26s as candidate models. The label bundle, fixed train/validation split, and a project-local training environment are prepared. Two tiny 640 px pilot runs have completed; full training and model comparison have not started. A safe label-preparation utility is available for validation and optional label-only output after explicit mapping selection.
 
 ## Candidate dataset: `quadrant_enumeration`
 
@@ -84,12 +84,56 @@ The split root uses local NTFS junctions: `images/` points to the external sourc
 
 Blank label files are valid and count as zero objects. None of the 634 current label files is blank. Exact per-class train/validation annotation counts and all source paths are recorded in `split_summary.json`. The split remains vulnerable to patient leakage because patient-level grouping metadata is unavailable.
 
-## Next steps after semantics are confirmed
+The dataset YAML `path` is relative to the **repository root working directory**, while `train.txt` and `val.txt` are relative to that dataset root. Run Ultralytics from the repository root (the directory containing this README); running from `generated/quadrant_enumeration_fdi_split/` changes how `path` is interpreted and will fail. The split generator writes this repository-relative path for newly created split outputs.
 
-1. Record the target definition and class mapping with its source.
-2. Check for patient/group identifiers; if available, keep groups together in a deterministic train/validation split.
-3. Convert a copy of the labels to the chosen YOLO detection format and validate the conversion.
-4. Keep test data isolated for final evaluation only.
-5. Verify both model variants, then compare them with the same split, image size, protocol, and comparable training budget.
+## Phase 8 640 px pilot
 
-Do not install packages, download model weights, train, or make Git commits/pushes without the user's direction.
+- Environment: Python 3.12.10, PyTorch 2.7.0+cu128, torchvision 0.22.0+cu128, Ultralytics 8.4.188.
+- Both detection checkpoints completed 2 epochs on the same 5% training fraction (25 of 507 train images), at 640 px, batch 1, seed 42, workers 0, AMP enabled, and validation on all 127 validation images.
+- Optimizer and augmentation settings were explicitly matched. Horizontal and vertical flips, color changes, mosaic, mixup, copy-paste, geometric transforms, and erasing were disabled for this pilot.
+- Logs, arguments, result CSV files, checkpoints, and peak-memory summaries are in the ignored `runs/pilot/` directory. The tiny pilot is only a compatibility and memory check; its metrics are not model-quality evidence.
+- The separate 250-image test dataset was not accessed.
+
+## Full experiment launcher and evaluation
+
+The approved full experiment consists of six sequential runs (YOLO11s and YOLO26s, seeds 13/21/42). The launcher uses the existing `.venv`, dataset YAML, and local checkpoints under `.venv/models/`. It writes unique outputs under `runs/full/`; existing paths are refused. A failed run is marked `failed` and blocks automatic retry. After inspecting and manually moving/renaming that failed directory, the same single-run command can be run again. `--all` stops on the first failure.
+
+Run from the repository root:
+
+```powershell
+# One run
+& .\.venv\Scripts\python.exe scripts\run_full_experiment.py --model yolo11s --seed 13
+
+# All six, sequentially
+& .\.venv\Scripts\python.exe scripts\run_full_experiment.py --all
+
+# After all full runs complete, evaluate each best checkpoint on validation
+foreach ($model in @('yolo11s', 'yolo26s')) {
+    foreach ($seed in @(13, 21, 42)) {
+        & .\.venv\Scripts\python.exe scripts\evaluate_yolo_checkpoint.py --model $model --seed $seed
+        if ($LASTEXITCODE -ne 0) { throw "Evaluation failed: $model seed $seed" }
+    }
+}
+
+# After validation evaluation, measure latency per best checkpoint
+foreach ($model in @('yolo11s', 'yolo26s')) {
+    foreach ($seed in @(13, 21, 42)) {
+        & .\.venv\Scripts\python.exe scripts\measure_yolo_latency.py --model $model --seed $seed
+        if ($LASTEXITCODE -ne 0) { throw "Latency measurement failed: $model seed $seed" }
+    }
+}
+
+# Aggregate into a new directory (refuses if the destination already exists)
+& .\.venv\Scripts\python.exe scripts\aggregate_yolo_results.py `
+    --runs-root runs\full `
+    --evaluation-root runs\evaluation `
+    --output-dir generated\full_experiment_aggregation
+```
+
+The default custom error-analysis thresholds are confidence `0.25` and class-agnostic matching IoU `0.50`. These counts are diagnostics, not mAP. Full training, validation evaluation, latency measurement, and aggregation commands are not run as part of repository preparation. See [`docs/full_experiment_protocol.md`](docs/full_experiment_protocol.md) for settings, outputs, and limitations.
+
+## Next phase
+
+The six-run experimental protocol and launcher are ready for user execution. The tiny pilots do not establish full-run convergence or model quality, and patient-level independence remains unverified because group identifiers were not found. Keep the test dataset isolated until its label compatibility is established in a separately approved review.
+
+The approved run protocol and Phase 11 validation, per-class analysis, latency, and aggregation commands are documented in [`docs/full_experiment_protocol.md`](docs/full_experiment_protocol.md). Preparing these tools did not start training.

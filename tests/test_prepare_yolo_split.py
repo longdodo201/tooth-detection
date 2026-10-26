@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -129,7 +130,13 @@ class SplitArtifactTests(unittest.TestCase):
             self.assertEqual((output / "train.txt").read_text(encoding="utf-8"), "./images/a.png\n./images/b.png\n")
             self.assertEqual((output / "val.txt").read_text(encoding="utf-8"), "./images/c.png\n")
             yaml_text = (output / "dataset.yaml").read_text(encoding="utf-8")
-            self.assertIn("path: .\ntrain: train.txt\nval: val.txt", yaml_text)
+            try:
+                expected_path = os.path.relpath(
+                    output.resolve(), start=Path(__file__).resolve().parents[1]
+                ).replace("\\", "/")
+            except ValueError:
+                expected_path = output.resolve().as_posix()
+            self.assertIn(f"path: {expected_path}\ntrain: train.txt\nval: val.txt", yaml_text)
             self.assertIn("31: FDI_48", yaml_text)
             self.assertIn("group_independence_guaranteed\": false", (output / "split_summary.json").read_text(encoding="utf-8"))
             with self.assertRaises(FileExistsError):

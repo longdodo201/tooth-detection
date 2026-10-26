@@ -16,4 +16,4 @@ New-Item -ItemType Junction -Path .\images -Target 'D:\long\training_data\quadra
 New-Item -ItemType Junction -Path .\labels -Target 'D:\long\tooth-detection\generated\quadrant_enumeration_fdi_labels\labels'
 ```
 
-`train.txt` and `val.txt` list image paths relative to this directory. YOLO resolves labels by replacing the `images` path component with `labels`; no source image or label copies are required.
+`train.txt` and `val.txt` list image paths relative to this directory. `dataset.yaml` points to this directory relative to the repository root. Run Ultralytics from the repository root; its `path` is interpreted relative to the process working directory, not the YAML file's location. YOLO resolves labels by replacing the `images` path component with `labels`; no source image or label copies are required.

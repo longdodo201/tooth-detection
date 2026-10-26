@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import random
 import sys
 from collections import Counter
@@ -148,6 +149,12 @@ def write_split_artifacts(
         raise FileExistsError(f"split output already exists: {output_dir}")
     output_dir.mkdir(parents=True)
 
+    repository_root = Path(__file__).resolve().parents[1]
+    try:
+        dataset_root = os.path.relpath(output_dir.resolve(), start=repository_root).replace("\\", "/")
+    except ValueError:  # output is on a different Windows drive
+        dataset_root = output_dir.resolve().as_posix()
+
     (output_dir / "train.txt").write_text(
         "".join(f"./images/{name}\n" for name in train_names), encoding="utf-8", newline="\n"
     )
@@ -155,7 +162,7 @@ def write_split_artifacts(
         "".join(f"./images/{name}\n" for name in val_names), encoding="utf-8", newline="\n"
     )
     (output_dir / "dataset.yaml").write_text(
-        "path: .\ntrain: train.txt\nval: val.txt\nnames:\n"
+        f"path: {dataset_root}\ntrain: train.txt\nval: val.txt\nnames:\n"
         + "".join(f"  {entry['class_id']}: FDI_{entry['fdi_code']}\n" for entry in mapping_entries),
         encoding="utf-8",
         newline="\n",
@@ -199,7 +206,7 @@ This directory contains reproducible split manifests and a YOLO dataset YAML. It
 - Test data was not used.
 - Blank label files are accepted and count as zero annotations; this source currently has no blank label files.
 
-The `dataset.yaml` and manifests use the standard YOLO layout. Create local NTFS junctions before using them so `images/` points to the source PNG directory and `labels/` points to the FDI label bundle. The junction paths are ignored by Git and can be recreated from `split_summary.json`:
+The `dataset.yaml` path is relative to the repository root, and its train/validation entries are relative to that dataset root. Run Ultralytics commands from the repository root; running from this split directory would interpret the path differently. The manifests and junctions use the standard YOLO layout. Create local NTFS junctions before using them so `images/` points to the source PNG directory and `labels/` points to the FDI label bundle. The junction paths are ignored by Git and can be recreated from `split_summary.json`:
 
 ```powershell
 New-Item -ItemType Junction -Path .\\images -Target '{images_dir.resolve()}'

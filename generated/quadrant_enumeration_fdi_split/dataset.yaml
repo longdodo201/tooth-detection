@@ -1,4 +1,4 @@
-path: .
+path: generated/quadrant_enumeration_fdi_split
 train: train.txt
 val: val.txt
 names:

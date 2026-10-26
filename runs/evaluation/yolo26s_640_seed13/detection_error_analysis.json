@@ -1,0 +1,18 @@
+{
+  "custom_diagnostic_not_mAP": true,
+  "matching_rule": "class-agnostic greedy one-to-one matching in descending box IoU; ties by validation label order then prediction order",
+  "match_iou_threshold": 0.5,
+  "confidence_threshold": 0.25,
+  "nms_iou_threshold": 0.7,
+  "error_types": [
+    "correct_match",
+    "class_confusion",
+    "false_negative",
+    "duplicate_prediction",
+    "localization_error",
+    "background_false_positive"
+  ],
+  "counts_file": "detection_error_analysis.csv",
+  "validation_images": 127,
+  "thresholds_are_custom_diagnostic_choices_not_standard_mAP": true
+}
